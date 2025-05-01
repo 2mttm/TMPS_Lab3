@@ -4,8 +4,8 @@ import io.dmitrirusnac.utm.course4.tmpp.lab3.TaskManager;
 import io.dmitrirusnac.utm.course4.tmpp.lab3.model.Task;
 
 public class AddTaskCommand implements Command {
-    private TaskManager manager;
-    private Task task;
+    private final TaskManager manager;
+    private final Task task;
 
     public AddTaskCommand(TaskManager manager, Task task) {
         this.manager = manager;

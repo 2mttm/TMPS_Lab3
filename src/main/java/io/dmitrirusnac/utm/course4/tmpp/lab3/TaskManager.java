@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManager implements Subject {
-    private List<Task> tasks = new ArrayList<>();
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Task> tasks = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
     private SortStrategy sortStrategy;
 
     public void setSortStrategy(SortStrategy strategy) {
@@ -19,7 +19,7 @@ public class TaskManager implements Subject {
 
     public Task getTaskByName(String name) {
         for (Task t : tasks) {
-            if (t.getName().equalsIgnoreCase(name)) {
+            if (t.name().equalsIgnoreCase(name)) {
                 return t;
             }
         }
